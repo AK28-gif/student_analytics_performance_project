@@ -1,0 +1,27 @@
+cat << 'EOF' > .gitignore
+# Environments
+venv/
+env/
+.env
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Airflow runtime files & logs
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+standalone_admin_password.txt
+logs/
+
+# MLflow SQLite DB & local run artifacts
+mlflow.db
+mlruns/
+.trash/
+
+# OS specific files
+.DS_Store
+EOF

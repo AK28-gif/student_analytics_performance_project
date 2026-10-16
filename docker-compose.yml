@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  inference-api:
+    build: .
+    container_name: student_risk_fastapi
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=production
+    restart: unless-stopped
