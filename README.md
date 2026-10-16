@@ -13,9 +13,6 @@ An enterprise-grade, end-to-end Data Engineering and MLOps system that ingests a
 
 ---
 
-## 🏗️ System & Data Architecture
-[UCI Repository Raw Data]│▼[Data Ingestion Layer]  ──> Preserved in data/raw/student-mat.csv│▼[ETL & Validation Pipeline] (Pandas, Psycopg2)│┌─────────┴────────────────────────────────┐▼                                          ▼[PostgreSQL Star Schema Mart]       [Rejected Records Log]├─ dim_students                     └─ logs/error_and_rejected_records.log├─ dim_academics└─ fact_student_analytics│┌─────────┴────────────────────────────────┐▼                                          ▼[Streamlit Analytics Dashboard]     [ML Training & Lineage Tracking] (MLflow)├─ Executive Academic KPIs          ├─ Logistic Regression├─ Attendance vs Marks Scatter      ├─ Random Forest├─ Pass / Fail Ratio Chart          └─ Gradient Boosting (Champion)└─ Early Intervention Table                        │▼[FastAPI Real-Time Inference Microservice]└─ POST /predict & GET /health│▼[Feature Drift & Retraining Monitor]└─ Statistical shift detection
----
 
 ## 🗄️ Database Design (Star Schema)
 
